@@ -5,5 +5,4 @@ cd Deploy-ruby-on-Gcloud
 chmod +x *.sh
 source ./install_mongodb.sh
 source ./install_ruby.sh
-source ./deploy_programm.#!/bin/sh
-echo "FINISH"
+source ./deploy_programm.sh
