@@ -1,0 +1,22 @@
+{
+  "builders": [
+    {
+      "communicator": "ssh",
+      "source_path": "ubuntu/xenial64",
+      "provider": "virtualbox",
+      "add_force": true,
+      "type": "vagrant"
+    }
+  ],
+  "provisioners": [
+    {
+      "type": "shell",
+      "script": "scripts/install_ruby.sh"
+    },
+    {
+      "type": "shell",
+      "script": "scripts/install_mongodb.sh",
+      "execute_command": "sudo {{ .Vars }} {{ .Path }}"
+    }
+  ]
+}
